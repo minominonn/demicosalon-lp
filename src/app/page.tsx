@@ -110,7 +110,7 @@ export default function LandingPage() {
               alt="DemiCo Relax フェイシャルトリートメントの様子"
               className="w-full h-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent via-60% to-black/95" />
           </div>
 
           {/* コンテンツ - 中央寄せ・最大幅制限 */}
@@ -156,7 +156,7 @@ export default function LandingPage() {
                 className="w-full h-full object-cover"
               />
               {/* 暗幕オーバーレイ */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/30 via-20% to-black/50" />
             </div>
 
             {/* オーバーレイコンテンツ - 中央寄せ・最大幅制限 */}
