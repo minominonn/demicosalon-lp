@@ -124,7 +124,7 @@ export default function LandingPage() {
                   癒しを超えて、<br />
                   <span className="text-[#e8d4a8]">整う</span>という考え方
                 </h1>
-                <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] animate-fade-in-up animation-delay-300">
+                <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] animate-fade-in-up animation-delay-300 mb-8 md:mb-10">
                   世界基準のハマム温熱 × 医療由来リンパMLD<br />
                   × 最高級未精製アルガンオイル × 良質な精油<br />
                   回復できる身体を、根本からつくる
