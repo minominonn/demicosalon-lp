@@ -117,23 +117,23 @@ export default function LandingPage() {
           <div className="relative h-full w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
             <div className="h-full flex flex-col justify-end pb-12 md:pb-16 lg:pb-24 xl:pb-28">
               <div className="w-full max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)]">
-                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
+                <img
+                  src="/hero1.png"
+                  alt="DemiCo Relax"
+                  className="w-48 md:w-56 lg:w-64 xl:w-72 mb-6 md:mb-8 animate-fade-in-up"
+                />
+                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up animation-delay-100">
                   PRIVATE SALON
                 </p>
-                <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[44px] xl:text-[52px] 2xl:text-[58px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-100">
+                <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[44px] xl:text-[52px] 2xl:text-[58px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-200">
                   癒しを超えて、<br />
                   <span className="text-[#e8d4a8]">整う</span>という考え方
                 </h1>
-                <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] mb-8 md:mb-10 animate-fade-in-up animation-delay-200">
+                <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] animate-fade-in-up animation-delay-300">
                   世界基準のハマム温熱 × 医療由来リンパMLD<br />
                   × 最高級未精製アルガンオイル × 良質な精油<br />
                   回復できる身体を、根本からつくる
                 </p>
-                <img
-                  src="/hero1.png"
-                  alt="DemiCo Relax"
-                  className="w-48 md:w-56 lg:w-64 xl:w-72 animate-fade-in-up animation-delay-300"
-                />
               </div>
             </div>
           </div>
