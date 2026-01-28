@@ -117,12 +117,7 @@ export default function LandingPage() {
           <div className="relative h-full w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
             <div className="h-full flex flex-col justify-end pb-12 md:pb-16 lg:pb-24 xl:pb-28">
               <div className="w-full max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)]">
-                <img
-                  src="/rogo.png"
-                  alt="DemiCo Relax"
-                  className="w-48 md:w-56 lg:w-64 xl:w-72 mb-6 md:mb-8 animate-fade-in-up"
-                />
-                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up animation-delay-100">
+                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
                   PRIVATE SALON
                 </p>
                 <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[44px] xl:text-[52px] 2xl:text-[58px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-200">
@@ -138,9 +133,20 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-[10px] md:text-[11px] tracking-[0.3em] text-white/50">SCROLL</span>
-            <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent" />
+          {/* ロゴ + スクロールインジケーター */}
+          <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div className="animate-float">
+              <img
+                src="/rogo.png"
+                alt="DemiCo Relax"
+                className="w-20 md:w-24 lg:w-28 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+              />
+            </div>
+            <div className="mt-4 flex flex-col items-center gap-1 opacity-60">
+              <svg className="w-5 h-5 text-white animate-bounce-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 14l-7 7m0 0l-7-7" />
+              </svg>
+            </div>
           </div>
         </section>
 
