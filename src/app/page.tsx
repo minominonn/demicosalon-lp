@@ -167,7 +167,7 @@ export default function LandingPage() {
               {/* セクション1: すべてに、理由がある。 */}
               <div
                 ref={section2.ref}
-                className={`text-center transition-all duration-[2000ms] ${
+                className={`text-center transition-all duration-[4000ms] ${
                   section2.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -184,7 +184,7 @@ export default function LandingPage() {
                   {/* 01 温める */}
                   <div
                     ref={method01.ref}
-                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 transition-all duration-[1500ms] ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 transition-all duration-[3500ms] ${
                       method01.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                     }`}
                   >
@@ -218,7 +218,7 @@ export default function LandingPage() {
                   {/* 02 流す */}
                   <div
                     ref={method02.ref}
-                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 flex-row-reverse lg:flex-row transition-all duration-[1500ms] ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 flex-row-reverse lg:flex-row transition-all duration-[3500ms] ${
                       method02.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                     }`}
                   >
@@ -252,7 +252,7 @@ export default function LandingPage() {
                   {/* 03 届ける */}
                   <div
                     ref={method03.ref}
-                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 transition-all duration-[1500ms] ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 transition-all duration-[3500ms] ${
                       method03.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                     }`}
                   >
@@ -286,7 +286,7 @@ export default function LandingPage() {
                   {/* 04 調律する */}
                   <div
                     ref={method04.ref}
-                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 flex-row-reverse lg:flex-row transition-all duration-[1500ms] ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 flex-row-reverse lg:flex-row transition-all duration-[3500ms] ${
                       method04.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                     }`}
                   >
@@ -322,7 +322,7 @@ export default function LandingPage() {
               {/* セクション3: 4つの技術が重なり */}
               <div
                 ref={concept.ref}
-                className={`text-center transition-all duration-[2000ms] ${
+                className={`text-center transition-all duration-[4000ms] ${
                   concept.isInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
               >
@@ -336,7 +336,7 @@ export default function LandingPage() {
               <div
                 id="trial"
                 ref={pricing.ref}
-                className={`transition-all duration-[2000ms] ${
+                className={`transition-all duration-[4000ms] ${
                   pricing.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
               >
@@ -367,7 +367,7 @@ export default function LandingPage() {
               {/* セクション5: DemiCo Relax */}
               <div
                 ref={footer.ref}
-                className={`transition-all duration-[2000ms] ${
+                className={`transition-all duration-[4000ms] ${
                   footer.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
