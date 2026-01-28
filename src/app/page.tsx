@@ -140,7 +140,7 @@ export default function LandingPage() {
               alt="DemiCo Relax"
               className="w-20 md:w-24 lg:w-28 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
             />
-            <svg className="w-5 h-5 mt-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
+            <svg className="w-5 h-5 mt-1 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
             </svg>
           </div>
