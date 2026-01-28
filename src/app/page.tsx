@@ -133,38 +133,16 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* FIRST TRIAL + ロゴ + スクロールインジケーター - セクション間に中央配置 */}
-          <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)]">
-            {/* FIRST TRIAL */}
-            <div className="text-center mb-4 md:mb-6">
-              <div className="flex items-center justify-center gap-3 mb-2 md:mb-3">
-                <div className="w-8 md:w-12 h-px bg-white/50" />
-                <span className="text-[9px] md:text-[11px] lg:text-[12px] tracking-[0.5em] text-white/80">FIRST TRIAL</span>
-                <div className="w-8 md:w-12 h-px bg-white/50" />
-              </div>
-              <h3 className="font-serif-jp text-[14px] md:text-[18px] lg:text-[22px] text-white mb-1 md:mb-2 tracking-wide">
-                ハマム温活 & 本格アロマリンパ
-              </h3>
-              <p className="text-[9px] md:text-[11px] lg:text-[12px] text-white/70 mb-2 md:mb-3 tracking-widest">
-                90min ― counseling included
-              </p>
-              <div>
-                <span className="text-[24px] md:text-[32px] lg:text-[40px] font-extralight text-white tracking-wider">¥17,000</span>
-                <span className="text-[9px] md:text-[11px] lg:text-[12px] text-white/60 ml-1">tax in</span>
-              </div>
-            </div>
-
-            {/* ロゴ */}
-            <div className="animate-float">
-              <img
-                src="/rogo.png"
-                alt="DemiCo Relax"
-                className="w-28 md:w-36 lg:w-44 xl:w-52 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-              />
-              <svg className="w-5 h-5 mt-1 mx-auto opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
-              </svg>
-            </div>
+          {/* ロゴ + スクロールインジケーター - セクション間に中央配置 */}
+          <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-float">
+            <img
+              src="/rogo.png"
+              alt="DemiCo Relax"
+              className="w-28 md:w-36 lg:w-44 xl:w-52 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            />
+            <svg className="w-5 h-5 mt-1 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
+            </svg>
           </div>
         </section>
 
@@ -184,7 +162,7 @@ export default function LandingPage() {
             </div>
 
             {/* オーバーレイコンテンツ - 中央寄せ・最大幅制限 */}
-            <div className="relative w-full max-w-[1400px] mx-auto min-h-screen [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-8 md:py-12 lg:py-16 xl:py-20 px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+            <div className="relative w-full max-w-[1400px] mx-auto min-h-screen [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-16 md:py-20 lg:py-28 xl:py-32 px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20 gap-12 md:gap-16 lg:gap-20 xl:gap-24">
 
               {/* セクション1: すべてに、理由がある。 */}
               <div
@@ -201,7 +179,7 @@ export default function LandingPage() {
 
               {/* セクション2: 01〜04 - 2x2グリッド（PC）/ 縦積み（モバイル） */}
               <div className="w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-14 xl:gap-16">
 
                   {/* 01 温める */}
                   <div
@@ -352,6 +330,38 @@ export default function LandingPage() {
                   4つの技術が重なり<br />
                   身体は「回復できる状態」へ戻る
                 </p>
+              </div>
+
+              {/* セクション4: ハマム温活＆本格アロマリンパ */}
+              <div
+                id="trial"
+                ref={pricing.ref}
+                className={`transition-all duration-1000 ${
+                  pricing.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
+              >
+                <div className="max-w-[320px] md:max-w-[420px] lg:max-w-[500px] xl:max-w-[560px] mx-auto">
+                  <article className="relative text-center">
+                    <div className="flex items-center justify-center gap-4 mb-3 md:mb-4 lg:mb-5">
+                      <div className="w-10 md:w-16 lg:w-20 h-px bg-white/50" />
+                      <span className="text-[10px] md:text-[12px] lg:text-[13px] xl:text-[14px] tracking-[0.5em] text-white/80">FIRST TRIAL</span>
+                      <div className="w-10 md:w-16 lg:w-20 h-px bg-white/50" />
+                    </div>
+
+                    <h3 className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] text-white mb-2 md:mb-3 tracking-wide">
+                      ハマム温活 & 本格アロマリンパ
+                    </h3>
+                    <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/70 mb-3 md:mb-4 lg:mb-5 tracking-widest">
+                      90min ― counseling included
+                    </p>
+
+                    <div className="mb-4 md:mb-6 lg:mb-8">
+                      <span className="text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-extralight text-white tracking-wider">¥17,000</span>
+                      <span className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/60 ml-2">tax in</span>
+                    </div>
+
+                                      </article>
+                </div>
               </div>
 
               {/* セクション5: DemiCo Relax */}
