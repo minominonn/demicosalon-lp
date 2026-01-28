@@ -131,7 +131,7 @@ export default function LandingPage() {
             </div>
 
             {/* ロゴ + スクロールインジケーター */}
-            <div className="flex flex-col items-start animate-float">
+            <div className="flex flex-col items-center animate-float w-full">
               <img
                 src="/rogo.png"
                 alt="DemiCo Relax"
