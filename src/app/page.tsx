@@ -360,13 +360,7 @@ export default function LandingPage() {
                       <span className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/60 ml-2">tax in</span>
                     </div>
 
-                    <a
-                      href={LINE_URL}
-                      className="inline-flex items-center justify-center w-full py-4 md:py-5 lg:py-6 border border-white/70 text-white text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] tracking-[0.4em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] [text-shadow:none] min-h-[48px] md:min-h-[56px]"
-                    >
-                      RESERVE
-                    </a>
-                  </article>
+                                      </article>
                 </div>
               </div>
 
