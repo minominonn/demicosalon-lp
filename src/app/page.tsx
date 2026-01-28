@@ -438,6 +438,13 @@ export default function LandingPage() {
               <div className="flex-1" />
             </div>
           </div>
+        </section>
+
+        {/* ===== 3枚目：コンセプト + 料金 + フッター ===== */}
+        <section className="relative" aria-label="コンセプトと料金">
+          <div className="relative w-full min-h-screen bg-[#1a1612]">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent" />
+            <div className="relative w-full max-w-[1400px] mx-auto min-h-screen [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-16 md:py-20 lg:py-28 xl:py-32 px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
 
               {/* セクション3: 4つの技術が重なり */}
               <div
