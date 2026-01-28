@@ -118,7 +118,7 @@ export default function LandingPage() {
             <div className="h-full flex flex-col justify-end pb-12 md:pb-16 lg:pb-24 xl:pb-28">
               <div className="w-full max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)]">
                 <img
-                  src="/rogo.jpg"
+                  src="/rogo.png"
                   alt="DemiCo Relax"
                   className="w-48 md:w-56 lg:w-64 xl:w-72 mb-6 md:mb-8 animate-fade-in-up"
                 />
