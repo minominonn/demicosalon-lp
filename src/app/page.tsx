@@ -113,34 +113,36 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent via-60% to-black/95" />
           </div>
 
-          {/* コンテンツ - 左寄せ・最大幅制限 */}
-          <div className="relative h-full w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20 flex flex-col justify-center">
-            <div className="[text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] mb-8 md:mb-12 max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl">
-              <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
-                PRIVATE SALON
-              </p>
-              <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[44px] xl:text-[52px] 2xl:text-[58px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-200">
-                癒しを超えて、<br />
-                <span className="text-[#e8d4a8]">整う</span>という考え方
-              </h1>
-              <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] animate-fade-in-up animation-delay-300">
-                世界基準のハマム温熱 × 医療由来リンパMLD<br />
-                × 最高級未精製アルガンオイル × 良質な精油<br />
-                回復できる身体を、根本からつくる
-              </p>
+          {/* コンテンツ - 左寄せ */}
+          <div className="relative h-full w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+            <div className="h-full flex flex-col justify-center pb-32 md:pb-40">
+              <div className="[text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
+                  PRIVATE SALON
+                </p>
+                <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[44px] xl:text-[52px] 2xl:text-[58px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-200">
+                  癒しを超えて、<br />
+                  <span className="text-[#e8d4a8]">整う</span>という考え方
+                </h1>
+                <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] animate-fade-in-up animation-delay-300">
+                  世界基準のハマム温熱 × 医療由来リンパMLD<br />
+                  × 最高級未精製アルガンオイル × 良質な精油<br />
+                  回復できる身体を、根本からつくる
+                </p>
+              </div>
             </div>
+          </div>
 
-            {/* ロゴ + スクロールインジケーター */}
-            <div className="flex flex-col items-center animate-float w-full">
-              <img
-                src="/rogo.png"
-                alt="DemiCo Relax"
-                className="w-20 md:w-24 lg:w-28 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-              />
-              <svg className="w-5 h-5 mt-1 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
-              </svg>
-            </div>
+          {/* ロゴ + スクロールインジケーター - セクション間に中央配置 */}
+          <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-float">
+            <img
+              src="/rogo.png"
+              alt="DemiCo Relax"
+              className="w-20 md:w-24 lg:w-28 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            />
+            <svg className="w-5 h-5 mt-1 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
+            </svg>
           </div>
         </section>
 
