@@ -108,7 +108,7 @@ export default function LandingPage() {
             <img
               src="/demilp10.jpg"
               alt="DemiCo Relax フェイシャルトリートメントの様子"
-              className="w-full h-full object-cover object-[center_30%]"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
           </div>
