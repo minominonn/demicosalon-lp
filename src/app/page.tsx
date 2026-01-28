@@ -102,7 +102,7 @@ export default function LandingPage() {
       <main className={`w-full overflow-x-hidden transition-opacity duration-1000 ${shown ? "opacity-100" : "opacity-0"}`}>
 
         {/* ===== 1枚目：HERO ===== */}
-        <section className="relative h-screen min-h-[600px] md:min-h-[700px] lg:min-h-[800px]" aria-label="ヒーローセクション">
+        <section className="relative h-[85vh] min-h-[500px] md:min-h-[550px] lg:min-h-[600px]" aria-label="ヒーローセクション">
           {/* 背景画像 - 画面幅100% */}
           <div className="absolute inset-0">
             <img
