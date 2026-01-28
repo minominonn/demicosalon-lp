@@ -98,10 +98,12 @@ export default function LandingPage() {
         }}
       />
 
-      <main className={`transition-opacity duration-1000 ${shown ? "opacity-100" : "opacity-0"}`}>
+      {/* メインコンテナ - 横スクロール防止 */}
+      <main className={`w-full overflow-x-hidden transition-opacity duration-1000 ${shown ? "opacity-100" : "opacity-0"}`}>
 
         {/* ===== 1枚目：HERO ===== */}
-        <section className="relative h-screen min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden" aria-label="ヒーローセクション">
+        <section className="relative h-screen min-h-[600px] md:min-h-[700px] lg:min-h-[800px]" aria-label="ヒーローセクション">
+          {/* 背景画像 - 画面幅100% */}
           <div className="absolute inset-0">
             <img
               src="/demilp10.jpg"
@@ -111,29 +113,32 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
           </div>
 
-          <div className="relative h-full flex flex-col justify-end pb-12 md:pb-16 lg:pb-24 px-5 md:px-8 lg:px-12">
-            <div className="w-full max-w-sm md:max-w-lg lg:max-w-2xl mx-auto lg:mx-0 lg:ml-[10%]">
-              <p className="text-[11px] md:text-[13px] lg:text-[14px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
-                PRIVATE SALON
-              </p>
-              <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[48px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-100">
-                癒しを超えて、<br />
-                <span className="text-[#e8d4a8]">整う</span>という考え方
-              </h1>
-              <p className="text-[13px] md:text-[15px] lg:text-[17px] text-white/70 leading-[1.9] md:leading-[2.0] mb-8 md:mb-10 animate-fade-in-up animation-delay-200">
-                世界基準のハマム温熱 × 医療由来リンパMLD<br />
-                × 最高級未精製アルガンオイル × 良質な精油<br />
-                回復できる身体を、根本からつくる
-              </p>
-              <a
-                href="#trial"
-                className="group flex items-center justify-center gap-3 w-full md:w-auto md:px-12 py-4 md:py-5 bg-white text-[#3a3a3a] text-[13px] md:text-[14px] lg:text-[15px] tracking-[0.2em] transition-all duration-300 hover:bg-[#e8d4a8] hover:scale-[1.02] animate-fade-in-up animation-delay-300 min-h-[48px]"
-              >
-                <span>初回限定プランを見る</span>
-                <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+          {/* コンテンツ - 中央寄せ・最大幅制限 */}
+          <div className="relative h-full w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+            <div className="h-full flex flex-col justify-end pb-12 md:pb-16 lg:pb-24 xl:pb-28">
+              <div className="w-full max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
+                  PRIVATE SALON
+                </p>
+                <h1 className="font-serif-jp text-[28px] md:text-[36px] lg:text-[44px] xl:text-[52px] 2xl:text-[58px] text-white tracking-wider mb-4 md:mb-6 leading-[1.4] animate-fade-in-up animation-delay-100">
+                  癒しを超えて、<br />
+                  <span className="text-[#e8d4a8]">整う</span>という考え方
+                </h1>
+                <p className="text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white/70 leading-[1.9] md:leading-[2.0] mb-8 md:mb-10 animate-fade-in-up animation-delay-200">
+                  世界基準のハマム温熱 × 医療由来リンパMLD<br />
+                  × 最高級未精製アルガンオイル × 良質な精油<br />
+                  回復できる身体を、根本からつくる
+                </p>
+                <a
+                  href="#trial"
+                  className="group inline-flex items-center justify-center gap-3 w-full md:w-auto md:px-12 lg:px-16 py-4 md:py-5 bg-white text-[#3a3a3a] text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] tracking-[0.2em] transition-all duration-300 hover:bg-[#e8d4a8] hover:scale-[1.02] animate-fade-in-up animation-delay-300 min-h-[48px]"
+                >
+                  <span>初回限定プランを見る</span>
+                  <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -145,48 +150,49 @@ export default function LandingPage() {
 
         {/* ===== 2枚目：フルイメージ + テクニック ===== */}
         <section className="relative" aria-label="トリートメント技術紹介">
-          {/* PC: 固定高さの背景 / モバイル: 自動高さ */}
-          <div className="relative lg:min-h-screen">
-            <img
-              src="/demilp11.jpg"
-              alt="DemiCo Relax サロンイメージ"
-              className="w-full h-auto lg:h-screen lg:object-cover"
-            />
+          {/* 背景画像 - 画面幅100%、高さは内容に合わせる */}
+          <div className="relative w-full min-h-screen">
+            {/* 背景画像を絶対配置で全画面に */}
+            <div className="absolute inset-0">
+              <img
+                src="/demilp11.jpg"
+                alt="DemiCo Relax サロンイメージ"
+                className="w-full h-full object-cover"
+              />
+              {/* 暗幕オーバーレイ */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+            </div>
 
-            {/* 暗幕オーバーレイ */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 pointer-events-none" />
-
-            {/* オーバーレイコンテンツ */}
-            <div className="absolute inset-0 [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-6 md:py-10 lg:py-16">
+            {/* オーバーレイコンテンツ - 中央寄せ・最大幅制限 */}
+            <div className="relative w-full max-w-[1400px] mx-auto min-h-screen [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-8 md:py-12 lg:py-16 xl:py-20 px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
 
               {/* セクション1: すべてに、理由がある。 */}
               <div
                 ref={section2.ref}
-                className={`text-center px-5 md:px-8 transition-all duration-1000 ${
+                className={`text-center transition-all duration-1000 ${
                   section2.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <p className="text-[11px] md:text-[13px] lg:text-[14px] tracking-[0.5em] text-white/90 mb-2 md:mb-3">THE METHODOLOGY</p>
-                <h2 className="font-serif-jp text-[24px] md:text-[32px] lg:text-[40px] text-white leading-[1.5] font-medium">
+                <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/90 mb-2 md:mb-3">THE METHODOLOGY</p>
+                <h2 className="font-serif-jp text-[24px] md:text-[32px] lg:text-[40px] xl:text-[48px] text-white leading-[1.5] font-medium">
                   すべてに、<br className="md:hidden" />理由がある。
                 </h2>
               </div>
 
-              {/* セクション2: 01〜04 */}
-              <div className="px-5 md:px-8 lg:px-12 max-w-5xl mx-auto w-full">
-                {/* PC: 2x2グリッド / モバイル: 縦積み */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+              {/* セクション2: 01〜04 - 2x2グリッド（PC）/ 縦積み（モバイル） */}
+              <div className="w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 xl:gap-12">
 
                   {/* 01 温める */}
                   <div
                     ref={method01.ref}
-                    className={`flex items-start gap-3 md:gap-4 transition-all duration-700 ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 transition-all duration-700 ${
                       method01.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                     }`}
                   >
-                    <div className="w-[80px] md:w-[100px] lg:w-[120px] flex-shrink-0 mt-1">
+                    <div className="w-[80px] md:w-[100px] lg:w-[110px] xl:w-[130px] flex-shrink-0">
                       <div
-                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full overflow-hidden"
+                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[130px] xl:h-[130px] rounded-full overflow-hidden"
                         style={{
                           boxShadow: "0 0 10px 8px rgba(255,255,255,0.3), 0 0 20px 15px rgba(255,255,255,0.15)",
                         }}
@@ -200,12 +206,12 @@ export default function LandingPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-[20px] md:text-[24px] lg:text-[28px] font-extralight text-white">01</span>
-                        <span className="text-[10px] md:text-[11px] lg:text-[12px] tracking-[0.15em] text-[#e8d4a8]">HAMAM</span>
+                        <span className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] font-extralight text-white">01</span>
+                        <span className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] tracking-[0.15em] text-[#e8d4a8]">HAMAM</span>
                       </div>
-                      <p className="text-[10px] md:text-[11px] lg:text-[12px] text-white/70">トルコ発祥・世界基準の温熱療法</p>
-                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] text-white my-1">温める</h3>
-                      <p className="text-[11px] md:text-[12px] lg:text-[13px] text-white/80 leading-[1.6]">
+                      <p className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] text-white/70">トルコ発祥・世界基準の温熱療法</p>
+                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white my-1">温める</h3>
+                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7]">
                         冷えや緊張で滞った体を、ハマムの高温多湿スチームでやさしくゆるめ、血管・リンパ・自律神経が「流れ出せる状態」へ整える土台工程です。
                       </p>
                     </div>
@@ -214,13 +220,13 @@ export default function LandingPage() {
                   {/* 02 流す */}
                   <div
                     ref={method02.ref}
-                    className={`flex items-start gap-3 md:gap-4 flex-row-reverse lg:flex-row transition-all duration-700 ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 flex-row-reverse lg:flex-row transition-all duration-700 ${
                       method02.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                     }`}
                   >
-                    <div className="w-[80px] md:w-[100px] lg:w-[120px] flex-shrink-0 mt-1">
+                    <div className="w-[80px] md:w-[100px] lg:w-[110px] xl:w-[130px] flex-shrink-0">
                       <div
-                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full overflow-hidden"
+                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[130px] xl:h-[130px] rounded-full overflow-hidden"
                         style={{
                           boxShadow: "0 0 10px 8px rgba(255,255,255,0.3), 0 0 20px 15px rgba(255,255,255,0.15)",
                         }}
@@ -234,12 +240,12 @@ export default function LandingPage() {
                     </div>
                     <div className="flex-1 min-w-0 text-right lg:text-left">
                       <div className="flex items-baseline gap-2 justify-end lg:justify-start">
-                        <span className="text-[20px] md:text-[24px] lg:text-[28px] font-extralight text-white">02</span>
-                        <span className="text-[10px] md:text-[11px] lg:text-[12px] tracking-[0.15em] text-[#e8d4a8]">MLD</span>
+                        <span className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] font-extralight text-white">02</span>
+                        <span className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] tracking-[0.15em] text-[#e8d4a8]">MLD</span>
                       </div>
-                      <p className="text-[10px] md:text-[11px] lg:text-[12px] text-white/70">1930年Vodder式・医療由来リンパ技術</p>
-                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] text-white my-1">流す</h3>
-                      <p className="text-[11px] md:text-[12px] lg:text-[13px] text-white/80 leading-[1.6]">
+                      <p className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] text-white/70">1930年Vodder式・医療由来リンパ技術</p>
+                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white my-1">流す</h3>
+                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7]">
                         リンパは強い圧では流れず、医療由来のMLDは皮膚へのごく軽い刺激でリンパの生理的な動きを呼び起こし、出口から自然な排出を促す手技です。
                       </p>
                     </div>
@@ -248,13 +254,13 @@ export default function LandingPage() {
                   {/* 03 届ける */}
                   <div
                     ref={method03.ref}
-                    className={`flex items-start gap-3 md:gap-4 transition-all duration-700 ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 transition-all duration-700 ${
                       method03.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                     }`}
                   >
-                    <div className="w-[80px] md:w-[100px] lg:w-[120px] flex-shrink-0 mt-1">
+                    <div className="w-[80px] md:w-[100px] lg:w-[110px] xl:w-[130px] flex-shrink-0">
                       <div
-                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full overflow-hidden"
+                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[130px] xl:h-[130px] rounded-full overflow-hidden"
                         style={{
                           boxShadow: "0 0 10px 8px rgba(255,255,255,0.3), 0 0 20px 15px rgba(255,255,255,0.15)",
                         }}
@@ -268,12 +274,12 @@ export default function LandingPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-[20px] md:text-[24px] lg:text-[28px] font-extralight text-white">03</span>
-                        <span className="text-[10px] md:text-[11px] lg:text-[12px] tracking-[0.15em] text-[#e8d4a8]">ARGAN</span>
+                        <span className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] font-extralight text-white">03</span>
+                        <span className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] tracking-[0.15em] text-[#e8d4a8]">ARGAN</span>
                       </div>
-                      <p className="text-[10px] md:text-[11px] lg:text-[12px] text-white/70">モロッコ産・最高級未精製アルガンオイル</p>
-                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] text-white my-1">届ける</h3>
-                      <p className="text-[11px] md:text-[12px] lg:text-[13px] text-white/80 leading-[1.6]">
+                      <p className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] text-white/70">モロッコ産・最高級未精製アルガンオイル</p>
+                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white my-1">届ける</h3>
+                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7]">
                         未精製の生アルガンオイルは皮脂に近く肌に残らず深部に浸透するため、皮膚だけを正確に動かすことでMLDの繊細な手技を最大限に活かすことができます。
                       </p>
                     </div>
@@ -282,13 +288,13 @@ export default function LandingPage() {
                   {/* 04 調律する */}
                   <div
                     ref={method04.ref}
-                    className={`flex items-start gap-3 md:gap-4 flex-row-reverse lg:flex-row transition-all duration-700 ${
+                    className={`flex items-start gap-4 md:gap-5 lg:gap-6 flex-row-reverse lg:flex-row transition-all duration-700 ${
                       method04.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                     }`}
                   >
-                    <div className="w-[80px] md:w-[100px] lg:w-[120px] flex-shrink-0 mt-1">
+                    <div className="w-[80px] md:w-[100px] lg:w-[110px] xl:w-[130px] flex-shrink-0">
                       <div
-                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full overflow-hidden"
+                        className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[130px] xl:h-[130px] rounded-full overflow-hidden"
                         style={{
                           boxShadow: "0 0 10px 8px rgba(255,255,255,0.3), 0 0 20px 15px rgba(255,255,255,0.15)",
                         }}
@@ -302,12 +308,12 @@ export default function LandingPage() {
                     </div>
                     <div className="flex-1 min-w-0 text-right lg:text-left">
                       <div className="flex items-baseline gap-2 justify-end lg:justify-start">
-                        <span className="text-[20px] md:text-[24px] lg:text-[28px] font-extralight text-white">04</span>
-                        <span className="text-[10px] md:text-[11px] lg:text-[12px] tracking-[0.15em] text-[#e8d4a8]">AROMA</span>
+                        <span className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] font-extralight text-white">04</span>
+                        <span className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] tracking-[0.15em] text-[#e8d4a8]">AROMA</span>
                       </div>
-                      <p className="text-[10px] md:text-[11px] lg:text-[12px] text-white/70">大脳辺縁系へ届くオーダー精油</p>
-                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] text-white my-1">調律する</h3>
-                      <p className="text-[11px] md:text-[12px] lg:text-[13px] text-white/80 leading-[1.6]">
+                      <p className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] text-white/70">大脳辺縁系へ届くオーダー精油</p>
+                      <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white my-1">調律する</h3>
+                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7]">
                         精油は香りによって脳と自律神経に直接働きかけ、皮膚からも全身へ巡るため、その日の状態に合わせたブレンドが呼吸・神経・リンパの反応を整えます。
                       </p>
                     </div>
@@ -318,11 +324,11 @@ export default function LandingPage() {
               {/* セクション3: 4つの技術が重なり */}
               <div
                 ref={concept.ref}
-                className={`text-center px-5 md:px-8 transition-all duration-1000 ${
+                className={`text-center transition-all duration-1000 ${
                   concept.isInView ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
               >
-                <p className="font-serif-jp text-[18px] md:text-[24px] lg:text-[28px] text-white leading-[1.8]">
+                <p className="font-serif-jp text-[18px] md:text-[24px] lg:text-[28px] xl:text-[32px] text-white leading-[1.8]">
                   4つの技術が重なり<br />
                   身体は「回復できる状態」へ戻る
                 </p>
@@ -332,33 +338,33 @@ export default function LandingPage() {
               <div
                 id="trial"
                 ref={pricing.ref}
-                className={`px-5 md:px-8 transition-all duration-1000 ${
+                className={`transition-all duration-1000 ${
                   pricing.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
               >
-                <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[480px] mx-auto">
+                <div className="max-w-[320px] md:max-w-[420px] lg:max-w-[500px] xl:max-w-[560px] mx-auto">
                   <article className="relative text-center">
-                    <div className="flex items-center justify-center gap-4 mb-3 md:mb-4">
-                      <div className="w-10 md:w-16 h-px bg-white/50" />
-                      <span className="text-[10px] md:text-[12px] lg:text-[13px] tracking-[0.5em] text-white/80">FIRST TRIAL</span>
-                      <div className="w-10 md:w-16 h-px bg-white/50" />
+                    <div className="flex items-center justify-center gap-4 mb-3 md:mb-4 lg:mb-5">
+                      <div className="w-10 md:w-16 lg:w-20 h-px bg-white/50" />
+                      <span className="text-[10px] md:text-[12px] lg:text-[13px] xl:text-[14px] tracking-[0.5em] text-white/80">FIRST TRIAL</span>
+                      <div className="w-10 md:w-16 lg:w-20 h-px bg-white/50" />
                     </div>
 
-                    <h3 className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] text-white mb-2 md:mb-3 tracking-wide">
+                    <h3 className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] text-white mb-2 md:mb-3 tracking-wide">
                       ハマム温活 & 本格アロマリンパ
                     </h3>
-                    <p className="text-[11px] md:text-[13px] lg:text-[14px] text-white/70 mb-3 md:mb-4 tracking-widest">
+                    <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/70 mb-3 md:mb-4 lg:mb-5 tracking-widest">
                       90min ― counseling included
                     </p>
 
-                    <div className="mb-4 md:mb-6">
-                      <span className="text-[32px] md:text-[40px] lg:text-[48px] font-extralight text-white tracking-wider">¥17,000</span>
-                      <span className="text-[11px] md:text-[13px] lg:text-[14px] text-white/60 ml-2">tax in</span>
+                    <div className="mb-4 md:mb-6 lg:mb-8">
+                      <span className="text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-extralight text-white tracking-wider">¥17,000</span>
+                      <span className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/60 ml-2">tax in</span>
                     </div>
 
                     <a
                       href={LINE_URL}
-                      className="inline-block w-full py-4 md:py-5 border border-white/70 text-white text-[12px] md:text-[14px] lg:text-[15px] tracking-[0.4em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] [text-shadow:none] min-h-[48px]"
+                      className="inline-flex items-center justify-center w-full py-4 md:py-5 lg:py-6 border border-white/70 text-white text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] tracking-[0.4em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] [text-shadow:none] min-h-[48px] md:min-h-[56px]"
                     >
                       RESERVE
                     </a>
@@ -369,20 +375,20 @@ export default function LandingPage() {
               {/* セクション5: DemiCo Relax */}
               <div
                 ref={footer.ref}
-                className={`px-5 md:px-8 transition-all duration-1000 ${
+                className={`transition-all duration-1000 ${
                   footer.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <div className="max-w-[320px] md:max-w-[400px] lg:max-w-[500px] mx-auto text-center">
-                  <p className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] text-white tracking-[0.15em] mb-2 md:mb-3">DEMICO RELAX & DETOX</p>
-                  <p className="text-[11px] md:text-[13px] lg:text-[14px] text-white/70 mb-4 md:mb-6 tracking-widest">
+                <div className="max-w-[320px] md:max-w-[420px] lg:max-w-[500px] xl:max-w-[560px] mx-auto text-center">
+                  <p className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] text-white tracking-[0.15em] mb-2 md:mb-3 lg:mb-4">DEMICO RELAX & DETOX</p>
+                  <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/70 mb-4 md:mb-6 lg:mb-8 tracking-widest">
                     南森町 徒歩3分｜8:00-22:00｜完全予約制｜女性専用
                   </p>
 
-                  <div className="flex gap-3 md:gap-4 [text-shadow:none]">
+                  <div className="flex gap-3 md:gap-4 lg:gap-5 [text-shadow:none]">
                     <a
                       href={LINE_URL}
-                      className="flex-1 py-3 md:py-4 border border-white/50 text-white text-[11px] md:text-[13px] lg:text-[14px] tracking-[0.25em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] min-h-[48px] flex items-center justify-center"
+                      className="flex-1 py-3 md:py-4 lg:py-5 border border-white/50 text-white text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.25em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] min-h-[48px] md:min-h-[56px] flex items-center justify-center"
                     >
                       LINE予約
                     </a>
@@ -390,7 +396,7 @@ export default function LandingPage() {
                       href={HP_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-3 md:py-4 border border-white/50 text-white text-[11px] md:text-[13px] lg:text-[14px] tracking-[0.25em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] min-h-[48px] flex items-center justify-center"
+                      className="flex-1 py-3 md:py-4 lg:py-5 border border-white/50 text-white text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.25em] transition-all duration-300 hover:bg-white hover:text-[#2a2a2a] min-h-[48px] md:min-h-[56px] flex items-center justify-center"
                     >
                       HOMEPAGE
                     </a>
