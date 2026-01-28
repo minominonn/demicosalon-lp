@@ -129,15 +129,11 @@ export default function LandingPage() {
                   × 最高級未精製アルガンオイル × 良質な精油<br />
                   回復できる身体を、根本からつくる
                 </p>
-                <a
-                  href="#trial"
-                  className="group inline-flex items-center justify-center gap-3 w-full md:w-auto md:px-12 lg:px-16 py-4 md:py-5 bg-white text-[#3a3a3a] text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] tracking-[0.2em] transition-all duration-300 hover:bg-[#e8d4a8] hover:scale-[1.02] animate-fade-in-up animation-delay-300 min-h-[48px]"
-                >
-                  <span>初回限定プランを見る</span>
-                  <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
+                <img
+                  src="/hero1.png"
+                  alt="DemiCo Relax"
+                  className="w-48 md:w-56 lg:w-64 xl:w-72 animate-fade-in-up animation-delay-300"
+                />
               </div>
             </div>
           </div>
