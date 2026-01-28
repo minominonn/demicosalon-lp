@@ -115,7 +115,7 @@ export default function LandingPage() {
 
           {/* コンテンツ - 左寄せ */}
           <div className="relative h-full w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-            <div className="h-full flex flex-col justify-center pb-32 md:pb-40">
+            <div className="h-full flex flex-col justify-center">
               <div className="[text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] tracking-[0.5em] text-white/80 mb-3 md:mb-4 animate-fade-in-up">
                   PRIVATE SALON
@@ -130,19 +130,19 @@ export default function LandingPage() {
                   回復できる身体を、根本からつくる
                 </p>
               </div>
-            </div>
-          </div>
 
-          {/* ロゴ + スクロールインジケーター - セクション間に中央配置 */}
-          <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-float">
-            <img
-              src="/rogo.png"
-              alt="DemiCo Relax"
-              className="w-20 md:w-24 lg:w-28 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-            />
-            <svg className="w-5 h-5 mt-1 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
-            </svg>
+              {/* ロゴ + スクロールインジケーター - テキストの次に中央配置 */}
+              <div className="flex flex-col items-center animate-float mt-8 md:mt-10">
+                <img
+                  src="/rogo.png"
+                  alt="DemiCo Relax"
+                  className="w-20 md:w-24 lg:w-28 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                />
+                <svg className="w-5 h-5 mt-1 opacity-80" fill="none" viewBox="0 0 24 24" stroke="#c9a86c">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7" />
+                </svg>
+              </div>
+            </div>
           </div>
         </section>
 
