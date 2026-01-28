@@ -148,21 +148,18 @@ export default function LandingPage() {
 
         {/* ===== 2枚目：フルイメージ + テクニック ===== */}
         <section className="relative" aria-label="トリートメント技術紹介">
-          {/* 背景画像 - 画面幅100%、高さは内容に合わせる */}
-          <div className="relative w-full min-h-screen lg:h-screen">
-            {/* 背景画像を絶対配置で全画面に */}
+
+          {/* モバイル/タブレット用 - 背景画像スタイル */}
+          <div className="lg:hidden relative w-full min-h-screen">
             <div className="absolute inset-0">
               <img
                 src="/demilp11.jpg"
                 alt="DemiCo Relax サロンイメージ"
                 className="w-full h-full object-cover"
               />
-              {/* 暗幕オーバーレイ */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/30 via-20% to-black/50 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/40 lg:to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/30 via-20% to-black/50" />
             </div>
-
-            {/* モバイル/タブレット用レイアウト */}
-            <div className="lg:hidden relative w-full max-w-[1400px] mx-auto min-h-screen [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-16 md:py-20 px-5 md:px-8 gap-12 md:gap-16">
+            <div className="relative w-full max-w-[1400px] mx-auto min-h-screen [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)] flex flex-col justify-evenly py-16 md:py-20 px-5 md:px-8 gap-12 md:gap-16">
 
               {/* セクション1: すべてに、理由がある。 */}
               <div
@@ -301,141 +298,149 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* PC用レイアウト - 左にタイトル＋コンテンツ、右は背景を活かす */}
-            <div className="hidden lg:flex relative h-full w-full max-w-[1800px] mx-auto [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)]">
+          {/* PC用レイアウト - 画像とコンテンツを横並び */}
+          <div className="hidden lg:flex relative w-full bg-[#1a1612]">
 
-              {/* 左側コンテンツエリア - 40% */}
-              <div className="w-[45%] xl:w-[40%] h-full flex flex-col justify-center py-16 xl:py-20 pl-12 xl:pl-20 2xl:pl-28 pr-8">
+            {/* 左側 - 画像エリア（画像の縦横比を保持） */}
+            <div className="w-[50%] xl:w-[55%] relative">
+              <img
+                src="/demilp11.jpg"
+                alt="DemiCo Relax サロンイメージ"
+                className="w-full h-auto object-contain"
+              />
+              {/* グラデーションオーバーレイ（右側へフェード） */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#1a1612]" />
+            </div>
 
-                {/* タイトル */}
+            {/* 右側 - コンテンツエリア */}
+            <div className="w-[50%] xl:w-[45%] flex flex-col justify-center py-20 xl:py-28 px-12 xl:px-16 2xl:px-20 [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%),_0_1px_4px_rgb(0_0_0_/_100%)]">
+
+              {/* タイトル */}
+              <div
+                ref={section2.ref}
+                className={`mb-16 xl:mb-20 transition-all duration-[4000ms] ${
+                  section2.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+              >
+                <p className="text-[13px] xl:text-[14px] tracking-[0.5em] text-white/90 mb-3">THE METHODOLOGY</p>
+                <h2 className="font-serif-jp text-[36px] xl:text-[44px] 2xl:text-[52px] text-white leading-[1.4] font-medium">
+                  すべてに、<br />理由がある。
+                </h2>
+              </div>
+
+              {/* 01〜04 縦積み */}
+              <div className="flex flex-col gap-10 xl:gap-14">
+
+                {/* 01 */}
                 <div
-                  ref={section2.ref}
-                  className={`mb-16 xl:mb-20 transition-all duration-[4000ms] ${
-                    section2.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  ref={method01.ref}
+                  className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
+                    method01.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
                   }`}
                 >
-                  <p className="text-[13px] xl:text-[14px] tracking-[0.5em] text-white/90 mb-3">THE METHODOLOGY</p>
-                  <h2 className="font-serif-jp text-[36px] xl:text-[44px] 2xl:text-[52px] text-white leading-[1.4] font-medium">
-                    すべてに、<br />理由がある。
-                  </h2>
+                  <div
+                    className="w-[70px] h-[70px] xl:w-[85px] xl:h-[85px] rounded-full overflow-hidden flex-shrink-0"
+                    style={{
+                      boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
+                    }}
+                  >
+                    <img src="/riraku2.jpg" alt="ハマム" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-baseline gap-3 mb-1">
+                      <span className="text-[28px] xl:text-[34px] font-extralight text-white">01</span>
+                      <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">HAMAM</span>
+                      <span className="font-serif-jp text-[16px] xl:text-[19px] text-white ml-2">温める</span>
+                    </div>
+                    <p className="text-[12px] xl:text-[14px] text-white/70 leading-[1.8]">
+                      ハマムの高温多湿スチームで体をゆるめ、流れ出せる状態へ。
+                    </p>
+                  </div>
                 </div>
 
-                {/* 01〜04 縦積み */}
-                <div className="flex flex-col gap-10 xl:gap-12">
-
-                  {/* 01 */}
+                {/* 02 */}
+                <div
+                  ref={method02.ref}
+                  className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
+                    method02.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+                  }`}
+                >
                   <div
-                    ref={method01.ref}
-                    className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
-                      method01.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-                    }`}
+                    className="w-[70px] h-[70px] xl:w-[85px] xl:h-[85px] rounded-full overflow-hidden flex-shrink-0"
+                    style={{
+                      boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
+                    }}
                   >
-                    <div
-                      className="w-[70px] h-[70px] xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden flex-shrink-0"
-                      style={{
-                        boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
-                      }}
-                    >
-                      <img src="/riraku2.jpg" alt="ハマム" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-baseline gap-3 mb-1">
-                        <span className="text-[28px] xl:text-[32px] font-extralight text-white">01</span>
-                        <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">HAMAM</span>
-                        <span className="font-serif-jp text-[16px] xl:text-[18px] text-white ml-2">温める</span>
-                      </div>
-                      <p className="text-[12px] xl:text-[13px] text-white/70 leading-[1.8]">
-                        ハマムの高温多湿スチームで体をゆるめ、流れ出せる状態へ。
-                      </p>
-                    </div>
+                    <img src="/shijutsu.jpg" alt="MLD" className="w-full h-full object-cover" />
                   </div>
-
-                  {/* 02 */}
-                  <div
-                    ref={method02.ref}
-                    className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
-                      method02.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-                    }`}
-                  >
-                    <div
-                      className="w-[70px] h-[70px] xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden flex-shrink-0"
-                      style={{
-                        boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
-                      }}
-                    >
-                      <img src="/shijutsu.jpg" alt="MLD" className="w-full h-full object-cover" />
+                  <div className="flex-1">
+                    <div className="flex items-baseline gap-3 mb-1">
+                      <span className="text-[28px] xl:text-[34px] font-extralight text-white">02</span>
+                      <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">MLD</span>
+                      <span className="font-serif-jp text-[16px] xl:text-[19px] text-white ml-2">流す</span>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-baseline gap-3 mb-1">
-                        <span className="text-[28px] xl:text-[32px] font-extralight text-white">02</span>
-                        <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">MLD</span>
-                        <span className="font-serif-jp text-[16px] xl:text-[18px] text-white ml-2">流す</span>
-                      </div>
-                      <p className="text-[12px] xl:text-[13px] text-white/70 leading-[1.8]">
-                        医療由来の繊細な手技でリンパの自然な排出を促す。
-                      </p>
-                    </div>
+                    <p className="text-[12px] xl:text-[14px] text-white/70 leading-[1.8]">
+                      医療由来の繊細な手技でリンパの自然な排出を促す。
+                    </p>
                   </div>
+                </div>
 
-                  {/* 03 */}
+                {/* 03 */}
+                <div
+                  ref={method03.ref}
+                  className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
+                    method03.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+                  }`}
+                >
                   <div
-                    ref={method03.ref}
-                    className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
-                      method03.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-                    }`}
+                    className="w-[70px] h-[70px] xl:w-[85px] xl:h-[85px] rounded-full overflow-hidden flex-shrink-0"
+                    style={{
+                      boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
+                    }}
                   >
-                    <div
-                      className="w-[70px] h-[70px] xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden flex-shrink-0"
-                      style={{
-                        boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
-                      }}
-                    >
-                      <img src="/arugan.png" alt="アルガン" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-baseline gap-3 mb-1">
-                        <span className="text-[28px] xl:text-[32px] font-extralight text-white">03</span>
-                        <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">ARGAN</span>
-                        <span className="font-serif-jp text-[16px] xl:text-[18px] text-white ml-2">届ける</span>
-                      </div>
-                      <p className="text-[12px] xl:text-[13px] text-white/70 leading-[1.8]">
-                        未精製アルガンオイルが深部に浸透し手技を最大化。
-                      </p>
-                    </div>
+                    <img src="/arugan.png" alt="アルガン" className="w-full h-full object-cover" />
                   </div>
+                  <div className="flex-1">
+                    <div className="flex items-baseline gap-3 mb-1">
+                      <span className="text-[28px] xl:text-[34px] font-extralight text-white">03</span>
+                      <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">ARGAN</span>
+                      <span className="font-serif-jp text-[16px] xl:text-[19px] text-white ml-2">届ける</span>
+                    </div>
+                    <p className="text-[12px] xl:text-[14px] text-white/70 leading-[1.8]">
+                      未精製アルガンオイルが深部に浸透し手技を最大化。
+                    </p>
+                  </div>
+                </div>
 
-                  {/* 04 */}
+                {/* 04 */}
+                <div
+                  ref={method04.ref}
+                  className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
+                    method04.isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+                  }`}
+                >
                   <div
-                    ref={method04.ref}
-                    className={`flex items-center gap-5 xl:gap-6 transition-all duration-[3500ms] ${
-                      method04.isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-                    }`}
+                    className="w-[70px] h-[70px] xl:w-[85px] xl:h-[85px] rounded-full overflow-hidden flex-shrink-0"
+                    style={{
+                      boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
+                    }}
                   >
-                    <div
-                      className="w-[70px] h-[70px] xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden flex-shrink-0"
-                      style={{
-                        boxShadow: "0 0 10px 8px rgba(255,255,255,0.25), 0 0 20px 15px rgba(255,255,255,0.1)",
-                      }}
-                    >
-                      <img src="/seiyu1.jpg" alt="精油" className="w-full h-full object-cover" />
+                    <img src="/seiyu1.jpg" alt="精油" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-baseline gap-3 mb-1">
+                      <span className="text-[28px] xl:text-[34px] font-extralight text-white">04</span>
+                      <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">AROMA</span>
+                      <span className="font-serif-jp text-[16px] xl:text-[19px] text-white ml-2">調律する</span>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-baseline gap-3 mb-1">
-                        <span className="text-[28px] xl:text-[32px] font-extralight text-white">04</span>
-                        <span className="text-[11px] xl:text-[12px] tracking-[0.2em] text-[#e8d4a8]">AROMA</span>
-                        <span className="font-serif-jp text-[16px] xl:text-[18px] text-white ml-2">調律する</span>
-                      </div>
-                      <p className="text-[12px] xl:text-[13px] text-white/70 leading-[1.8]">
-                        オーダー精油が脳と自律神経に働きかけ全身を整える。
-                      </p>
-                    </div>
+                    <p className="text-[12px] xl:text-[14px] text-white/70 leading-[1.8]">
+                      オーダー精油が脳と自律神経に働きかけ全身を整える。
+                    </p>
                   </div>
                 </div>
               </div>
-
-              {/* 右側 - 背景画像を見せるための空白エリア */}
-              <div className="flex-1" />
             </div>
           </div>
         </section>
