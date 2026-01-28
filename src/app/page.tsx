@@ -372,7 +372,7 @@ export default function LandingPage() {
                 }`}
               >
                 <div className="max-w-[320px] md:max-w-[420px] lg:max-w-[500px] xl:max-w-[560px] mx-auto text-center">
-                  <p className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] text-white tracking-[0.15em] mb-2 md:mb-3 lg:mb-4">DEMICO RELAX & DETOX</p>
+                  <p className="font-serif-jp text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] text-white tracking-[0.15em] mb-2 md:mb-3 lg:mb-4">DemiCo Relax Aromatherapy</p>
                   <p className="text-[11px] md:text-[13px] lg:text-[14px] xl:text-[15px] text-white/70 mb-4 md:mb-6 lg:mb-8 tracking-widest">
                     南森町 徒歩3分｜8:00-22:00｜完全予約制｜女性専用
                   </p>
