@@ -243,7 +243,7 @@ export default function LandingPage() {
                       </div>
                       <p className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] text-white/70">1930年Vodder式・医療由来リンパ技術</p>
                       <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white my-1">流す</h3>
-                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7]">
+                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7] text-left">
                         リンパは強い圧では流れず、医療由来のMLDは皮膚へのごく軽い刺激でリンパの生理的な動きを呼び起こし、出口から自然な排出を促す手技です。
                       </p>
                     </div>
@@ -311,7 +311,7 @@ export default function LandingPage() {
                       </div>
                       <p className="text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] text-white/70">大脳辺縁系へ届くオーダー精油</p>
                       <h3 className="font-serif-jp text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] text-white my-1">調律する</h3>
-                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7]">
+                      <p className="text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] text-white/80 leading-[1.7] text-left">
                         精油は香りによって脳と自律神経に直接働きかけ、皮膚からも全身へ巡るため、その日の状態に合わせたブレンドが呼吸・神経・リンパの反応を整えます。
                       </p>
                     </div>
