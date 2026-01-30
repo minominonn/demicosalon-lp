@@ -298,7 +298,7 @@ export default function LandingPage() {
                         }}
                       >
                         <img
-                          src="/seiyu1.jpg"
+                          src="/seiyu.png"
                           alt="精油"
                           className="w-full h-full object-cover"
                         />
